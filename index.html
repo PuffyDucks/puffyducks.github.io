@@ -32,7 +32,7 @@ function dragStart(event) {
 
 function allowDrop(event) {
     event.preventDefault();
-    document.getElementById("demo").innerHTML = "FOOOB!!! plZ lEgo InTo mOuTH!!!!";
+    document.getElementById("demo").innerHTML = "FOOOB!!! plZ lEgo InTo mOuTH!!!!!";
     event.target.style.border = "4px dotted green";
 }
 
@@ -41,7 +41,7 @@ function drop(event) {
     var data = event.dataTransfer.getData("Text");
     event.target.appendChild(document.getElementById(data));
     document.getElementById("demo").innerHTML = "Nommy.";
-    location.replace("https://google.com");
+    location.replace("/dogo.html");
 }
 </script>
 </body>
