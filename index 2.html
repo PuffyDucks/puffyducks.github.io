@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#droptarget {
+    float: left;
+    width: 300px;
+    height: ;
+    margin: 0px;
+    margin-top: 0px;
+    padding: 10px;
+    border: 0px solid #aaaaaa;
+}
+</style>
+</head>
+<body>
+<h1>Quack</h1>
+<p>Hi</p>
+<p>Tests and Stuff</p>
+<p>ducks</p>
+<img src="bawk.png" alt="chicken" id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"width="512">
+<a title="By Popo le Chien (Own work) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AGarlicbread.jpg"><img width="512" alt="Garlicbread" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Garlicbread.jpg/512px-Garlicbread.jpg" id="bred" ondragstart="dragStart(event)" draggable="true"/></a>
+<h1 id="demo"></h1>
+<p><br/><br/><br/><br/>bred protec <br/>bred attac <br/>but most importantly <br/>bred garlic</p>
+<script>
+for(var i=0; i<1; i++) {
+  document.getElementById("demo").innerHTML = "bak bak sirr yuk yuk chicken. feeb me! drag garlicc breb ingo me mouht pls!! butt don clik et and eet it for yeself.............";
+}
+function dragStart(event) {
+    event.dataTransfer.setData("Text", event.target.id);
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+    document.getElementById("demo").innerHTML = "FOOOB!!! plZ lEgo InTo mOuTH!!!!!";
+    event.target.style.border = "4px dotted green";
+}
+
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("Text");
+    event.target.appendChild(document.getElementById(data));
+    document.getElementById("demo").innerHTML = "Nommy.";
+    location.replace("/Garlic-Bread/dogo.html");
+}
+</script>
+</body>
+</html>
