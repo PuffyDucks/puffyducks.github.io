@@ -28,6 +28,7 @@
 <a title="By Popo le Chien (Own work) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" ><img width="512" alt="Garlicbread" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Garlicbread.jpg/512px-Garlicbread.jpg" id="bred" ondragstart="dragStart(event)" draggable="true"/><br/>
 </a>By Popo le Chien (Own work) [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AGarlicbread.jpg">via Wikimedia Commons</a>
 <h1 id="demo"></h1>
+<a href="index.html">Go Back</a>
 <p><br/><br/><br/><br/>bred protec <br/>bred attac <br/>but most importantly <br/>bred garlic</p>
 <script>
 for(var i=0; i<1; i++) {
@@ -39,7 +40,7 @@ function dragStart(event) {
 
 function allowDrop(event) {
     event.preventDefault();
-    document.getElementById("demo").innerHTML = "FOOOB!!! plZ lEgo InTo mOuTH!!!!! unless your browser sucks then have fun you'll never see what happens next mwahahahah";
+    document.getElementById("demo").innerHTML = "FOOOB!!! plZ lEgo InTo mOuTH!!!!! unless your browser sucks then have fun you'll never see what happens next mwahahahah. If you can't then";
     event.target.style.border = "4px dotted green";
 }
 
@@ -48,7 +49,7 @@ function drop(event) {
     var data = event.dataTransfer.getData("Text");
     event.target.appendChild(document.getElementById(data));
     document.getElementById("demo").innerHTML = "Nommy.";
-    location.replace("dogo.html");
+    window.open("dogo.html","_self");
 }
 </script>
 </body>
