@@ -16,6 +16,10 @@
 </head>
 <body>
   <form method="post" target="browser">
+  <a href="javascript:var username = prompt(&quot;Paste Username&quot;);">Press me to paste username.</a>
+  <a href="javascript:var playlist = prompt(&quot;Paste Playlist&quot;);">Press me to paste playlist.</a>
+  <a href="javascript:var link = prompt(&quot;Copy this&quot;,&quot;https:/&quot;+&quot;/open.spotify.com/embed?uri=spotify:user:&quot;+username+&quot;:playlist:&quot;+playlist);">Press me to generate link.</a>
+  <a href="">Press me if you have no idea how to use this.</a>
   <input id="txtUrl" style="width:82%;" placeholder="Put the playlist link here" name="url" type="text" />
   <input style="width:8%;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
   </form>
