@@ -88,6 +88,14 @@
     function goForward() {
       window.history.forward();
     }
+    function setBrowserSizeSmaller() {
+      var browserFrame = document.getElementById("id_iframe");
+      browserFrame.height: 500px;
+    }
+    function setBrowserSizeBigger() {
+      var browserFrame = document.getElementById("id_iframe");
+      browserFrame.height: 500px;
+    }
   </script>
 </head>
 <body>
@@ -101,6 +109,8 @@
   <input id="txtUrl" style="width:70%; background-color: #6E0DD0; border: solid 1px #aaaaaa;" placeholder="Put the link here" name="url" type="text"/>
   <!-- Text Color #FF0099 -->
   <input style="width:15%; background-color: #02C887;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
+  <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
+  <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/>
   </form>
   <div id="id_div_iframe">
     <iframe id="id_iframe" name="id_iframe" src="IFrame-info.html" style="height: 600px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
