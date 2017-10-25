@@ -96,11 +96,10 @@
     }
     function setBrowserFrameSourceToGamesTest(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "https://puffyducks.github.io/Error.html";
-      setTimeout(setBrowserFrameSourceToGames, 300)
-    }
-    function setBrowserFrameSourceToGames(){
       browserFrame.src= "https://ultimate-p2.weebly.com";
+      if (browserFrame.src !== "https://ultimate-p2.weebly.com";) {
+        browserFrame.src= "https://puffyducks.github.io/Error.html";
+      }
     }
     function setBrowserFrameSourceToLol(){
       var browserFrame = document.getElementById("browser");
@@ -151,7 +150,7 @@
   </form>
   <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 575px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
   <button class="button button1" onclick="setBrowserFrameSourceToDuckDuckGo()">DuckDuckGo</button>
-  <button class="button button1" onclick="setBrowserFrameSourceToGamesTest()">Games</button>
+  <button class="button button1" onclick="setBrowserFrameSourceToGames()">Games</button>
   <button class="button button1" onclick="setBrowserFrameSourceToGitHub()">My Website</button>
   <button class="button button1" onclick="setBrowserFrameSourceToLol()">Amazing Stuff</button>
   <button class="button button1" onclick="setBrowserFrameSourceToInfo()">Blank Page</button>
