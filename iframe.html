@@ -6,6 +6,22 @@
     iframe {
       height: 80%;
     }
+
+    input[type=text] {
+      height: 20%;
+      width:70%;
+      background-color: #3f00ff;
+      border: solid 1px #aaaaaa;
+      color: #FF0099;
+      margin: 5px 3px;
+      padding: 4px 10px;
+      outline: none;
+    }
+
+    input[type=text]:focus {
+
+    }
+
     .button {
       border: none;
       color: black;
@@ -58,6 +74,9 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript">
+    // while (true) {
+    //   console.log("hi");
+    // }
     function setBrowserFrameSource(){
         var browserFrame = document.getElementById("browser");
         browserFrame.src= document.getElementById("txtUrl").value;
@@ -114,7 +133,7 @@
   <a href="">Press me if you have no idea how to use this.</a> -->
   <input style="width:3%; background-color: #02C887;" type="button" value="<-" onclick="goBack(); return false;"/>
   <input style="width:3%; background-color: #02C887;" type="button" value="->" onclick="goForward(); return false;"/>
-  <input id="txtUrl" style="width:70%; background-color: #6E0DD0; border: solid 1px #aaaaaa;" placeholder="Put the link here" name="url" type="text"/>
+  <input id="txtUrl" style="" placeholder="Put the link here" name="url" type="text"/>
   <!-- Text Color #FF0099 -->
   <input style="width:15%; background-color: #02C887;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
   <!-- <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
