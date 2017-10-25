@@ -88,7 +88,7 @@
     function goForward() {
       window.history.forward();
     }
-    function setBrowserSizeSmaller() {
+    /**function setBrowserSizeSmaller() {
       var browserHeight = document.getElementById("browser").style.height;
       height=height.replace("px","");
       height=+height;
@@ -103,7 +103,7 @@
       var n=height;
       height=n+300+'px';
       document.getElementById('browser').style.height = height;
-    }
+    }**/
   </script>
 </head>
 <body>
@@ -117,10 +117,10 @@
   <input id="txtUrl" style="width:70%; background-color: #6E0DD0; border: solid 1px #aaaaaa;" placeholder="Put the link here" name="url" type="text"/>
   <!-- Text Color #FF0099 -->
   <input style="width:15%; background-color: #02C887;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
-  <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
-  <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/>
+  <!-- <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
+  <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/> -->
   </form>
-  <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 600px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
+  <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 550px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
   <button class="button button1" onclick="setBrowserFrameSourceToDuckDuckGo()">DuckDuckGo</button>
   <button class="button button1" onclick="setBrowserFrameSourceToGames()">Games</button>
   <button class="button button1" onclick="setBrowserFrameSourceToGitHub()">Check Out My Website</button>
