@@ -47,7 +47,7 @@
     body {
       background-color: #7CDBD5;
     }
-    #id_iframe {
+    #browser {
       height:80%;
     }
   </style>
@@ -59,27 +59,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript">
     function setBrowserFrameSource(){
-        var browserFrame = document.getElementById("id_iframe");
+        var browserFrame = document.getElementById("browser");
         browserFrame.src= document.getElementById("txtUrl").value;
     }
     function setBrowserFrameSourceToDuckDuckGo(){
-        var browserFrame = document.getElementById("id_iframe");
+        var browserFrame = document.getElementById("browser");
         browserFrame.src= "https://duckduckgo.com";
     }
     function setBrowserFrameSourceToGitHub(){
-        var browserFrame = document.getElementById("id_iframe");
+        var browserFrame = document.getElementById("browser");
         browserFrame.src= "https://puffyducks.github.io";
     }
     function setBrowserFrameSourceToGames(){
-        var browserFrame = document.getElementById("id_iframe");
+        var browserFrame = document.getElementById("browser");
         browserFrame.src= "http://ultimate-p2.weebly.com";
     }
     function setBrowserFrameSourceToLol(){
-        var browserFrame = document.getElementById("id_iframe");
+        var browserFrame = document.getElementById("browser");
         browserFrame.src= "https://www.youtube.com/embed/DLzxrzFCyOs?autoplay=1";
     }
     function setBrowserFrameSourceToInfo(){
-        var browserFrame = document.getElementById("id_iframe");
+        var browserFrame = document.getElementById("browser");
         browserFrame.src= "IFrame-info.html";
     }
     function goBack() {
@@ -89,17 +89,25 @@
       window.history.forward();
     }
     function setBrowserSizeSmaller() {
-      var browserFrame = document.getElementById("id_iframe");
-      browserFrame.height: 500px;
+      var browserHeight = document.getElementById("browser").style.height;
+      height=height.replace("px","");
+      height=+height;
+      var n=height;
+      height=n+300+'px';
+      document.getElementById('browser').style.height = height;
     }
     function setBrowserSizeBigger() {
-      var browserFrame = document.getElementById("id_iframe");
-      browserFrame.height: 500px;
+      var browserFrame = document.getElementById("browser").style.height;
+      height=height.replace("px","");
+      height=+height;
+      var n=height;
+      height=n+300+'px';
+      document.getElementById('browser').style.height = height;
     }
   </script>
 </head>
 <body>
-  <form method="post" target="id_iframe">
+  <form method="post" target="browser">
   <!-- <a href="javascript:var username = prompt(&quot;Paste Username&quot;);">Press me to paste username.</a>
   <a href="javascript:var playlist = prompt(&quot;Paste Playlist&quot;);">Press me to paste playlist.</a>
   <a href="javascript:var link = prompt(&quot;Copy this&quot;,&quot;https:/&quot;+&quot;/open.spotify.com/embed?uri=spotify:user:&quot;+username+&quot;:playlist:&quot;+playlist);">Press me to generate link.</a>
@@ -112,9 +120,7 @@
   <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
   <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/>
   </form>
-  <div id="id_div_iframe">
-    <iframe id="id_iframe" name="id_iframe" src="IFrame-info.html" style="height: 600px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
-  </div>
+  <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 600px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
   <button class="button button1" onclick="setBrowserFrameSourceToDuckDuckGo()">DuckDuckGo</button>
   <button class="button button1" onclick="setBrowserFrameSourceToGames()">Games</button>
   <button class="button button1" onclick="setBrowserFrameSourceToGitHub()">Check Out My Website</button>
