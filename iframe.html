@@ -83,29 +83,32 @@
     //   console.log("hi");
     // }
     function setBrowserFrameSource(){
-        var browserFrame = document.getElementById("browser");
-        browserFrame.src= document.getElementById("txtUrl").value;
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= document.getElementById("txtUrl").value;
     }
     function setBrowserFrameSourceToDuckDuckGo(){
-        var browserFrame = document.getElementById("browser");
-        browserFrame.src= "https://duckduckgo.com";
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "https://duckduckgo.com";
     }
     function setBrowserFrameSourceToGitHub(){
-        var browserFrame = document.getElementById("browser");
-        browserFrame.src= "https://puffyducks.github.io";
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "https://puffyducks.github.io";
+    }
+    function setBrowserFrameSourceToGamesTest(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "https://puffyducks.github.io/Error.html";
+      setTimeout(setBrowserFrameSourceToGames, 300)
     }
     function setBrowserFrameSourceToGames(){
-        var browserFrame = document.getElementById("browser");
-        browserFrame.src= "https://puffyducks.github.io/Error.html";
-        browserFrame.src= "https://ultimate-p2.weebly.com";
+      browserFrame.src= "https://ultimate-p2.weebly.com";
     }
     function setBrowserFrameSourceToLol(){
-        var browserFrame = document.getElementById("browser");
-        browserFrame.src= "https://player.vimeo.com/video/45196609?autoplay=1";
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "https://player.vimeo.com/video/45196609?autoplay=1";
     }
     function setBrowserFrameSourceToInfo(){
-        var browserFrame = document.getElementById("browser");
-        browserFrame.src= "IFrame-info.html";
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "IFrame-info.html";
     }
     function goBack() {
       window.history.back();
