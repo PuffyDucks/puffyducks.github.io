@@ -3,13 +3,50 @@
 <head>
   <title>IFrame</title>
   <style>
-    body {
-      background-color: #DAE9E4;
-    }
-    #username{color:#000;} /* black when not with focus */
-    #username:focus{color:#de2a00;} /* green when input has focus - only affects this specific input */
-  </style>
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
 
+  .button1 {
+    background-color: #F53240;
+    color: black;
+    width: 19%;
+    font-size: 12px;
+  }
+
+  .button1:hover {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+      background-color: #F53240;
+      color: black;
+      font-size: 12px;
+  }
+
+  .button2 {
+    background-color: #02C887;
+    color: black;
+    width: 19%;
+    font-size: 12px;
+  }
+
+  .button2:hover {
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+      background-color: #02C887;
+      color: black;
+      font-size: 12px;
+  }
+    body {
+      background-color: #7CDBD5;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="button-style.css" title="button-style" />
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -38,7 +75,13 @@
     }
     function setBrowserFrameSourceToBlank(){
         var browserFrame = document.getElementById("browser");
-        browserFrame.src= "https://puffyducks.github.io/gEt-OuT-oF-hErE.html";
+        browserFrame.src= "";
+    }
+    function goBack() {
+      window.history.back();
+    }
+    function goForward() {
+      window.history.forward();
     }
   </script>
 </head>
@@ -48,15 +91,17 @@
   <a href="javascript:var playlist = prompt(&quot;Paste Playlist&quot;);">Press me to paste playlist.</a>
   <a href="javascript:var link = prompt(&quot;Copy this&quot;,&quot;https:/&quot;+&quot;/open.spotify.com/embed?uri=spotify:user:&quot;+username+&quot;:playlist:&quot;+playlist);">Press me to generate link.</a>
   <a href="">Press me if you have no idea how to use this.</a> -->
-  <input id="txtUrl" style="width:70%; background-color: #ECC7C0; border: solid 1px #aaaaaa;" placeholder="Put the link here" name="url" type="text"/>
-  <input style="width:20%; background-color: #3C2E3D;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
+  <input style="width:3%; background-color: #02C887;" type="button" value="<-" onclick="goBack(); return false;"/>
+  <input style="width:3%; background-color: #02C887;" type="button" value="->" onclick="goForward(); return false;"/>
+  <input id="txtUrl" style="width:70%; background-color: #6E0DD0; border: solid 1px #aaaaaa;" placeholder="Put the link here" name="url" type="text"/>
+  <!-- Text Color #FF0099 -->
+  <input style="width:20%; background-color: #02C887;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
   </form>
-  <iframe id="browser" name="browser" src="https://puffyducks.github.io/gEt-OuT-oF-hErE.html" style="height:550px; width:100%; background-color: #FDAE84"></iframe> <br/>
-  <p>Warning: Click "Go," don't press enter. It won't work. Some websites, like Google, Yahoo, and Spotify won't work and will show a blank white page. Instead of Google, use https://duckduckgo.com. Also, links need http:// at the beginning or else they won't work. Made by PuffyDucks.<br/>Bookmarks:<br/></p>
-  <input style="width:15%; background-color: #FDAE84;" type="button" value="DuckDuckGo" onclick="setBrowserFrameSourceToDuckDuckGo(); return false;"/>
-  <input style="width:15%; background-color: #FDAE84" type="button" value="Check Out My Website" onclick="setBrowserFrameSourceToGitHub(); return false;"/>
-  <input style="width:15%; background-color: #FDAE84" type="button" value="Games" onclick="setBrowserFrameSourceToGames(); return false;"/>
-  <input style="width:15%; background-color: #FDAE84" type="button" value="Amazing Stuff" onclick="setBrowserFrameSourceToLol(); return false;"/>
-  <input style="width:15%; background-color: #FDAE84" type="button" value="Blank Page" onclick="setBrowserFrameSourceToBlank(); return false;"/>
+  <iframe id="browser" name="browser" src="IFrame-intro.html" style="height:550px; width:100%; background-color: #F9BE02"></iframe> <br/>
+  <button class="button button1" onclick="setBrowserFrameSourceToBlank()">DuckDuckGo</button>
+  <button class="button button1" onclick="setBrowserFrameSourceToBlank()">Check Out My Website</button>
+  <button class="button button1" onclick="setBrowserFrameSourceToBlank()">Games</button>
+  <button class="button button1" onclick="setBrowserFrameSourceToBlank()">Amazing Stuff</button>
+  <button class="button button1" onclick="setBrowserFrameSourceToBlank()">Blank Page</button>
 </body>
 </html>
