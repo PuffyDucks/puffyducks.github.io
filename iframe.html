@@ -40,7 +40,7 @@
 
     .button1 {
       background-color: #F53240;
-      width: 19%;
+      width: 15%;
       padding: 15px 32px;
       font-size: 12px;
     }
@@ -109,6 +109,10 @@
       var browserFrame = document.getElementById("browser");
       browserFrame.src= "IFrame-info.html";
     }
+    function setBrowserFrameSourceToRepeatYT(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "http://repeatyt.com";
+    }
     function goBack() {
       window.history.back();
     }
@@ -134,25 +138,32 @@
   </script>
 </head>
 <body>
-  <form method="post" target="browser">
-  <!-- <a href="javascript:var username = prompt(&quot;Paste Username&quot;);">Press me to paste username.</a>
-  <a href="javascript:var playlist = prompt(&quot;Paste Playlist&quot;);">Press me to paste playlist.</a>
-  <a href="javascript:var link = prompt(&quot;Copy this&quot;,&quot;https:/&quot;+&quot;/open.spotify.com/embed?uri=spotify:user:&quot;+username+&quot;:playlist:&quot;+playlist);">Press me to generate link.</a>
-  <a href="">Press me if you have no idea how to use this.</a> -->
-  <input style="width:3%; background-color: #02C887;" type="button" value="<-" onclick="goBack(); return false;"/>
-  <input style="width:3%; background-color: #02C887;" type="button" value="->" onclick="goForward(); return false;"/>
-  <input id="txtUrl" style="" placeholder="Put the link here" name="url" type="text"/>
-  <!-- Text Color #FF0099 -->
-  <input style="width:15%; background-color: #02C887;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
-  <!-- Do later: change website according to IFrame -->
-  <!-- <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
-  <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/> -->
-  </form>
-  <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 575px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
-  <button class="button button1" onclick="setBrowserFrameSourceToDuckDuckGo()">DuckDuckGo</button>
-  <button class="button button1" onclick="setBrowserFrameSourceToGames()">Games</button>
-  <button class="button button1" onclick="setBrowserFrameSourceToGitHub()">My Website</button>
-  <button class="button button1" onclick="setBrowserFrameSourceToLol()">Amazing Stuff</button>
-  <button class="button button1" onclick="setBrowserFrameSourceToInfo()">Blank Page</button>
+  <div align="center">
+    <form method="post" target="browser">
+    <!-- <a href="javascript:var username = prompt(&quot;Paste Username&quot;);">Press me to paste username.</a>
+    <a href="javascript:var playlist = prompt(&quot;Paste Playlist&quot;);">Press me to paste playlist.</a>
+    <a href="javascript:var link = prompt(&quot;Copy this&quot;,&quot;https:/&quot;+&quot;/open.spotify.com/embed?uri=spotify:user:&quot;+username+&quot;:playlist:&quot;+playlist);">Press me to generate link.</a>
+    <a href="">Press me if you have no idea how to use this.</a> -->
+    <input style="width:3%; background-color: #02C887;" type="button" value="<-" onclick="goBack(); return false;"/>
+    <input style="width:3%; background-color: #02C887;" type="button" value="->" onclick="goForward(); return false;"/>
+    <input id="txtUrl" style="" placeholder="Put the link here" name="url" type="text"/>
+    <!-- Text Color #FF0099 -->
+    <input style="width:15%; background-color: #02C887;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
+    <!-- Do later: change website according to IFrame -->
+    <!-- <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
+    <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/> -->
+    </form>
+  </div>
+  <div>
+    <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 575px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
+  </div>
+  <div align="center">
+    <button class="button button1" onclick="setBrowserFrameSourceToDuckDuckGo()">DuckDuckGo</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToGames()">Games</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToRepeatYT()">RepeatYT</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToGitHub()">My Website</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToLol()">Amazing Stuff</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToInfo()">Info</button>
+  </div>
 </body>
 </html>
