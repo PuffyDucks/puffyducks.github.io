@@ -84,34 +84,37 @@
     // }
     function setBrowserFrameSource(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= document.getElementById("txtUrl").value;
+      browserFrame.src = document.getElementById("txtUrl").value;
+      if (document.getElementById("txtUrl").value === "") {
+        browserFrame.src = "blank.html";
+      }
     }
-    function setBrowserFrameSourceToDuckDuckGo(){
+    function setBrowserFrameSourceToBing(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "https://duckduckgo.com";
+      browserFrame.src = "https://www.bing.com";
     }
     function setBrowserFrameSourceToGitHub(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "https://puffyducks.github.io";
+      browserFrame.src = "https://puffyducks.github.io";
     }
     function setBrowserFrameSourceToGames(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "http://ultimate-p2.weebly.com";
+      browserFrame.src = "https://puffyducks.github.io/Cake-Fall/";
       // if (browserFrame.src !== "https://ultimate-p2.weebly.com";) {
-      //   browserFrame.src= "https://puffyducks.github.io/Error.html";
+      //   browserFrame.src = "https://puffyducks.github.io/Error.html";
       // }
     }
     function setBrowserFrameSourceToLol(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "https://player.vimeo.com/video/45196609?autoplay=1";
+      browserFrame.src = "https://player.vimeo.com/video/45196609?autoplay=1";
     }
     function setBrowserFrameSourceToInfo(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "IFrame-info.html";
+      browserFrame.src = "IFrame-info.html";
     }
     function setBrowserFrameSourceToRepeatYT(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "http://repeatyt.com";
+      browserFrame.src = "http://repeatyt.com";
     }
     function goBack() {
       window.history.back();
@@ -155,11 +158,11 @@
     </form>
   </div>
   <div>
-    <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 575px; width:100%; background-color: #F9BE02; border: none; frameborder="0""></iframe> <br/>
+    <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 575px; width:100%; background-color: #fff; border: none; frameborder="0""></iframe> <br/>
   </div>
   <div align="center">
-    <button class="button button1" onclick="setBrowserFrameSourceToDuckDuckGo()">DuckDuckGo</button>
-    <button class="button button1" onclick="setBrowserFrameSourceToGames()">Games</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToBing()">Bing</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToGames()">My Game in Progress</button>
     <button class="button button1" onclick="setBrowserFrameSourceToRepeatYT()">RepeatYT</button>
     <button class="button button1" onclick="setBrowserFrameSourceToGitHub()">My Website</button>
     <button class="button button1" onclick="setBrowserFrameSourceToLol()">Amazing Stuff</button>
