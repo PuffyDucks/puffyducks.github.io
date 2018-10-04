@@ -1,0 +1,104 @@
+body{
+  background-color: #F1EAF1;
+  margin: 0;
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #D390C2;
+}
+
+li.menu a, li.home a, li.selected a{
+  float: left;
+  display: inline-block;
+  text-align: center;
+  padding: 1vh 3vw;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Roboto", Verdana, Tahoma;
+  color:  #FFFFFF;
+}
+
+li.home {
+  float: left;
+  font-size: 20px;
+  background-color: #816DE8;
+}
+
+li.home:hover {
+  background-color: #8C7AEA;
+}
+
+li.menu a:hover {
+  background-color: #D4ACCA;
+}
+
+li.selected {
+  float: left;
+  font-size: 20px;
+  background-color: #BF789E;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(Roboto/Roboto-Regular.ttf) format("truetype");
+  font-family: "RobotoB";
+  src: url(Roboto/Roboto-Black.ttf) format("truetype"),
+  font-family: "RobotoL";
+  src: url(Roboto/Roboto-Light.ttf) format("truetype");
+}
+
+h1 {
+  margin: 60px;
+  font-size: 40px;
+  font-family: "Roboto", Verdana, Tahoma;
+}
+li.image {
+  margin: 20px;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 1vh 0vw;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "RobotoL", Verdana, Tahoma;
+}
+img {
+  margin: 10px;
+  padding: 1vh 1vw;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+}
+
+td {
+  width: 13vw;
+}
+table#week {
+  margin-left: auto;
+  margin-right: auto;
+  width: 92%;
+}
+
+table#week tr:nth-child(even) {
+    background-color: #FFF0FF;
+}
+table#week tr:nth-child(odd) {
+   background-color: #F0E4F0;
+}
+table#week th {
+    background-color: #926292;
+    color: white;
+}
+
+span.marquee  {
+  background: url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);
+}
