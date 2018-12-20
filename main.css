@@ -1,0 +1,29 @@
+body {
+  background-color: #FADDAF;
+  word-wrap: initial;
+  margin:  25px;
+}
+
+a#title {
+  font-family:times;
+  font-size:64px;
+  text-decoration:none;
+  font-family:times;
+  color:#472C25;
+}
+
+a.direct {
+  font-family:times;
+  font-size:24px;
+  text-decoration:none;
+  font-family:times;
+  color:#CC5543;
+}
+
+a.about {
+  font-family:times;
+  font-size:24px;
+  text-decoration:none;
+  font-family:times;
+  color:#EB712F;
+}

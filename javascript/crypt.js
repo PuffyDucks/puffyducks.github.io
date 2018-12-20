@@ -52,9 +52,7 @@ if (type === "E" || type === "Encode" || type === "encode" || type === "e") {
         }
         decrypted += (letters[currentLetterNumber / keyNumber - 1]);
     }
-    if (true) {
-        var dummy = prompt(decrypted, decrypted);
-    }
 } else {
     alert("Sorry, I don't understand what you said. make sure you say Encode, Decode, E or D. Maybe you made a typo.");
 }
+void(0);

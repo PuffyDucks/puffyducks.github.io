@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Garlic Bread</title>
+<meta charset="UTF-8">
+<meta name="description" content="Garlic Bread">
+<meta name="keywords" content="Garlic, Bread">
+<meta name="author" content="Louis Park">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
 background-color: #FDF3B5;
@@ -15,45 +21,38 @@ background-color: #FDF3B5;
     border: 0px solid #aaaaaa;
 }
 </style>
-<title>Garlic Bread</title>
-<meta charset="UTF-8">
-<meta name="description" content="Garlic Bread">
-<meta name="keywords" content="Garlic, Bread">
-<meta name="author" content="Louis Park">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>Quack</h1>
-<p>Yummmm</p>
-<p>smooth jazz </p>
-<p>ducks</p>
-<img src="bawk.png" alt="chicken" id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"width="512">
-<a title="By Popo le Chien (Own work) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" ><img width="512" alt="Garlicbread" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Garlicbread.jpg/512px-Garlicbread.jpg" id="bred" ondragstart="dragStart(event)" draggable="true"/><br/>
-</a>By Popo le Chien (Own work) [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File%3AGarlicbread.jpg">via Wikimedia Commons</a>
-<h1 id="demo"></h1>
-<a href="../index.html">Go Back</a>
-<p><br/><br/><br/><br/>bred protec <br/>bred attac <br/>but most importantly <br/>bred garlic</p>
-<script>
-for(var i=0; i<1; i++) {
-  document.getElementById("demo").innerHTML = "bak bak sirr yuk yuk chicken. feeb me! drag garlicc breb ingo me mouht pls!!";
-}
-function dragStart(event) {
-    event.dataTransfer.setData("Text", event.target.id);
-}
+  <h1>Quack</h1>
+  <p>Yummmm</p>
+  <p>smooth jazz </p>
+  <p>ducks</p>
+  <img src="bawk.png" alt="chicken" id="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"width="512">
+  <a title="By Popo le Chien (Own work) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" ><img width="512" alt="Garlicbread" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Garlicbread.jpg/512px-Garlicbread.jpg" id="bred" ondragstart="dragStart(event)" draggable="true"/><br/>
+  <h1 id="demo"></h1>
+  <a href="../index.html">Go Back</a>
+  <p><br/><br/>bred protec <br/>bred attac <br/>but most importantly <br/>bred garlic</p>
+  <script>
+  for(var i=0; i<1; i++) {
+    document.getElementById("demo").innerHTML = "bak bak sirr yuk yuk chicken. feeb me! drag garlicc breb ingo me mouht pls!!";
+  }
+  function dragStart(event) {
+      event.dataTransfer.setData("Text", event.target.id);
+  }
 
-function allowDrop(event) {
-    event.preventDefault();
-    document.getElementById("demo").innerHTML = "FOOOB!!! plZ lEgo InTo mOuTH!!!!! ";
-    event.target.style.border = "4px dotted green";
-}
+  function allowDrop(event) {
+      event.preventDefault();
+      document.getElementById("demo").innerHTML = "FOOOB!!! plZ lEgo InTo mOuTH!!!!! ";
+      event.target.style.border = "4px dotted green";
+  }
 
-function drop(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("Text");
-    event.target.appendChild(document.getElementById(data));
-    document.getElementById("demo").innerHTML = "Nommy.";
-    window.open("dogo.html","_self");
-}
-</script>
+  function drop(event) {
+      event.preventDefault();
+      var data = event.dataTransfer.getData("Text");
+      event.target.appendChild(document.getElementById(data));
+      document.getElementById("demo").innerHTML = "Nommy.";
+      window.open("dogo.html","_self");
+  }
+  </script>
 </body>
 </html>
