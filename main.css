@@ -1,5 +1,5 @@
 body {
-  background-color: #FADDAF;
+  background-color: #F7F2F7;
   word-wrap: initial;
   margin:  25px;
 }
@@ -9,7 +9,7 @@ a#title {
   font-size:64px;
   text-decoration:none;
   font-family:times;
-  color:#472C25;
+  color:#3f0059;
 }
 
 a.direct {
@@ -17,7 +17,7 @@ a.direct {
   font-size:24px;
   text-decoration:none;
   font-family:times;
-  color:#CC5543;
+  color:#8e00a1;
 }
 
 a.about {
@@ -25,5 +25,5 @@ a.about {
   font-size:24px;
   text-decoration:none;
   font-family:times;
-  color:#EB712F;
+  color:#af00b5;
 }
