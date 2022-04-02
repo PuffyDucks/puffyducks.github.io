@@ -5,25 +5,23 @@ body {
 }
 
 a#title {
-  font-family:times;
   font-size:64px;
   text-decoration:none;
-  font-family:times;
   color:#3f0059;
 }
 
 a.direct {
-  font-family:times;
   font-size:24px;
   text-decoration:none;
-  font-family:times;
   color:#8e00a1;
 }
 
 a.about {
-  font-family:times;
   font-size:24px;
   text-decoration:none;
-  font-family:times;
   color:#af00b5;
+}
+
+a, h1 {
+  font-family: 'Roboto Slab', serif;
 }
